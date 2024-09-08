@@ -19,7 +19,7 @@ jobs:
         node-version: '16'
 
     - name: Install dependencies
-      run: npm install
+      run: pip install pip
 
 
     # Coloquei essas coisas só pra rodar o ci por enquanto. não quero utilizar o github pages.
