@@ -19,5 +19,9 @@ jobs:
         node-version: '16'
 
     - name: Install dependencies
-      run: #Por enquanto, não temos dependencias, vou esperar as melhorias do Happy para decidir o que colocar aqui.
-      # TODO: Adaptar o código para as futuras melhorias
+      run: npm install
+
+    - name: Build project
+      run: npm run build
+
+    # Coloquei essas coisas só pra rodar o ci por enquanto. não quero utilizar o github pages.
