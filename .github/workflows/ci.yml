@@ -21,7 +21,5 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Build project
-      run: npm run build
 
     # Coloquei essas coisas só pra rodar o ci por enquanto. não quero utilizar o github pages.
