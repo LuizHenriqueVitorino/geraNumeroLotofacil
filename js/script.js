@@ -1,8 +1,9 @@
+
 function gerarNumerosLotofacil() {
     const numeros = [];
     while (numeros.length < 15) {
         const numeroAleatorio = Math.floor(Math.random() * 25) + 1;
-        // Verifica se o número já está no conjunto, se não, então adiciona.
+        // Verifica se o número já está no conjunto, senão, então adiciona.
         if (!numeros.includes(numeroAleatorio)) {
             numeros.push(numeroAleatorio);
         }
