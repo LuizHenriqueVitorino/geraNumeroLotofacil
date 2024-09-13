@@ -15,9 +15,9 @@ document.getElementById('gerar-btn').addEventListener('click', function() {
     const numeros = gerarNumerosLotofacil();
     const numerosDiv = document.querySelector('.numeros');
     numerosDiv.innerHTML = '';
-    numeros.forEach(function(numero) {
+    numeros.forEach(numero => {
         const numeroSpan = document.createElement('span');
-        numeroSpan.classList.add('numero');
+        numeroSpan.className = 'numero'
         numeroSpan.textContent = numero;
         numerosDiv.appendChild(numeroSpan);
     });
