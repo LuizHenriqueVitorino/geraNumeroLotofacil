@@ -13,7 +13,7 @@ function gerarNumerosLotofacil() {
 
 document.getElementById('gerar-btn').addEventListener('click', function() {
     const numeros = gerarNumerosLotofacil();
-    const numerosDiv = document.getElementById('numeros');
+    const numerosDiv = document.querySelector('.numeros');
     numerosDiv.innerHTML = '';
     numeros.forEach(function(numero) {
         const numeroSpan = document.createElement('span');
