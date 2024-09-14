@@ -1,5 +1,5 @@
 
-function gerarNumerosLotofacil() {
+export function gerarNumerosLotofacil() {
     const numeros = [];
     while (numeros.length < 15) {
         const numeroAleatorio = Math.floor(Math.random() * 25) + 1;
