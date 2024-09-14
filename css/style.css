@@ -36,7 +36,7 @@ body {
     text-align: center;
 }
 
-#gerar-btn {
+#gerar-btn, #limpar-btn {
     margin-top: 20px;
 }
 

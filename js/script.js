@@ -31,3 +31,10 @@ document.getElementById('gerar-btn').addEventListener('click', function() {
     });
     numerosDiv.appendChild(lineDiv);
 });
+
+document.getElementById('limpar-btn').addEventListener('click', function() {
+    const numerosDiv = document.querySelector('.numeros');
+    const historicoDiv = document.querySelector('.historico');
+    numerosDiv.innerHTML = '';
+    historicoDiv.innerHTML = '';
+});
