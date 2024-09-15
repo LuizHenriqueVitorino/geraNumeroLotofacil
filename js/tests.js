@@ -1,5 +1,4 @@
-
-import { gerarNumerosLotofacil } from "./script";
+const { gerarNumerosLotofacil } = require('./script.js');
 
 function testGerarNumerosLotoFacil(){
     const response = gerarNumerosLotofacil()
