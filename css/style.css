@@ -4,6 +4,9 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
 .container {
@@ -11,15 +14,16 @@ body {
     padding: 30px;
     border-radius: 10px;
     box-shadow: 0 0 55px rgba(0, 0, 0, 0.3);
+    width: 100%;
 }
 
-.numeros {
-    font-size: 24px;
-    font-weight: bold;
+.numeros div {
     margin-top: 20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 10px;
+    max-height: 300px;
 }
 
 .numero {
@@ -29,8 +33,22 @@ body {
     color: white;
     border-radius: 5px;
     font-size: 18px;
+    text-align: center;
 }
 
-#gerar-btn {
+#gerar-btn, #limpar-btn {
     margin-top: 20px;
+}
+
+.historico {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #333;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.historico div {
+    margin-top: 10px;
+    text-align: left;
 }
