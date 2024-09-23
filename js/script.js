@@ -1,5 +1,5 @@
 
-export function gerarNumerosLotofacil() {
+function gerarNumerosLotofacil() {
     const numeros = [];
     while (numeros.length < 15) {
         const numeroAleatorio = Math.floor(Math.random() * 25) + 1;
@@ -10,31 +10,37 @@ export function gerarNumerosLotofacil() {
     return numeros.sort((a, b) => a - b);
 }
 
-document.getElementById('gerar-btn').addEventListener('click', function() {
-    const numeros = gerarNumerosLotofacil();
-    const numerosDiv = document.querySelector('.numeros');
-    const historicoDiv = document.querySelector('.historico');
+if (typeof window !== 'undefined' && typeof document !== 'undefined') {
+    document.getElementById('gerar-btn').addEventListener('click', function() {
+        const numeros = gerarNumerosLotofacil();
+        const numerosDiv = document.querySelector('.numeros');
+        const historicoDiv = document.querySelector('.historico');
 
-    if (numerosDiv.firstChild) {
-        const historicoLine = document.createElement('div');
-        historicoLine.textContent = Array.from(numerosDiv.firstChild.children).map(el => el.textContent).join(', ');
-        historicoDiv.insertBefore(historicoLine, historicoDiv.firstChild);
-    }
+        if (numerosDiv.firstChild) {
+            const historicoLine = document.createElement('div');
+            historicoLine.textContent = Array.from(numerosDiv.firstChild.children).map(el => el.textContent).join(', ');
+            historicoDiv.insertBefore(historicoLine, historicoDiv.firstChild);
+        }
 
-    numerosDiv.innerHTML = '';
-    const lineDiv = document.createElement('div');
-    numeros.forEach(numero => {
-        const numeroSpan = document.createElement('span');
-        numeroSpan.className = 'numero';
-        numeroSpan.textContent = numero;
-        lineDiv.appendChild(numeroSpan);
+        numerosDiv.innerHTML = '';
+        const lineDiv = document.createElement('div');
+        numeros.forEach(numero => {
+            const numeroSpan = document.createElement('span');
+            numeroSpan.className = 'numero';
+            numeroSpan.textContent = numero;
+            lineDiv.appendChild(numeroSpan);
+        });
+        numerosDiv.appendChild(lineDiv);
     });
-    numerosDiv.appendChild(lineDiv);
-});
 
-document.getElementById('limpar-btn').addEventListener('click', function() {
-    const numerosDiv = document.querySelector('.numeros');
-    const historicoDiv = document.querySelector('.historico');
-    numerosDiv.innerHTML = '';
-    historicoDiv.innerHTML = '';
-});
+    document.getElementById('limpar-btn').addEventListener('click', function() {
+        const numerosDiv = document.querySelector('.numeros');
+        const historicoDiv = document.querySelector('.historico');
+        numerosDiv.innerHTML = '';
+        historicoDiv.innerHTML = '';
+    });
+}
+
+if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
+    module.exports = { gerarNumerosLotofacil };
+}
